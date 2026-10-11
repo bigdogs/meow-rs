@@ -27,6 +27,11 @@ the canonical, in-repo source a release is cut from.
 
 ### Fixed
 
+- **TCP benchmark measurements** (issue #746): disable Nagle on the harness
+  client and echo sockets to reduce macOS loopback tail stalls, reject
+  incomplete echoes, and add an interleaved comparison runner with retained
+  samples and a three-trial throughput report.
+
 - **WebSocket tunnel stability**: large and repeated writes now respect
   bounded sink backpressure, and Ping replies flush correctly when a
   read-only tunnel recovers from write backpressure.

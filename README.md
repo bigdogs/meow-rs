@@ -175,6 +175,8 @@ Side-by-side against upstream Go mihomo v1.19.31 on the same host (Apple M4 Pro 
 
 The table covers the direct and DNS legs. The optional proxied-outbound leg requires `sing-box`; the idle, steady-state, and config-reload legs write separate JSON artifacts under `target/bench/`. Numbers vary with host load, and the p99 latency spread was higher than the 10% acceptance band in this sample, so treat these as a current snapshot rather than a release gate. Loopback bulk-transfer throughput measures per-proxy CPU overhead, not real-network throughput. For the full methodology, three-run-median protocol, and workload definitions (W1–W5), see [ADR-0006](docs/adr/0006-m2-benchmark-methodology.md) and [docs/benchmarks/index.md](docs/benchmarks/index.md).
 
+The [#746 throughput follow-up](docs/benchmarks/tcp-throughput-746.md) fixes transport stalls in the benchmark endpoints and records repeated, interleaved comparisons of the two short-transfer workloads.
+
 ## Architecture
 
 ```mermaid

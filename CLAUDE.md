@@ -175,7 +175,7 @@ cargo test -p meow-config --features trusttunnel-h3 --test trusttunnel_config_te
 # alone is not enough: it skips every `--test` target, so a broken integration
 # test (e.g. the ADR-0001 guard in `crate_invariants_test`) passes locally and
 # lands `main` red.
-cargo test --lib --bin meow \
+cargo test --lib --bin meow --bin meow-bench \
   --test socks5_udp_user \
   --test common_test --test dns_cache_test --test config_test \
   --test tun_config_test --test dialer_proxy_group \
