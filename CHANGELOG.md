@@ -8,6 +8,8 @@ the canonical, in-repo source a release is cut from.
 
 ## [Unreleased]
 
+## [0.23.0] - 2026-10-16
+
 ### Added
 
 - **Per-connection notes** (`connection-notes: true`, off by default): the
