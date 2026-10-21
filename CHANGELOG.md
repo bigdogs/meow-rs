@@ -8,6 +8,8 @@ the canonical, in-repo source a release is cut from.
 
 ## [Unreleased]
 
+## [0.26.0] - 2026-10-21
+
 ### Added
 
 - **`PATCH /configs` turns TUN on and off without a restart**: a mihomo
